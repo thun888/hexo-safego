@@ -4,7 +4,7 @@
 2. 添加可自定义项：
    1. 是否自动跳转
    2. 主题色
-3. 自动获取页面信息（搭配[xaoxuu/site-info-api](https://github.com/xaoxuu/site-info-api/)）
+3. 自动获取页面信息和摘要（搭配[xaoxuu/site-info-api](https://github.com/xaoxuu/site-info-api/)）
 
 ![image](https://github.com/user-attachments/assets/03b33d20-42e0-41d7-91c0-dd9f7518d5f9)
 

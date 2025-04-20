@@ -176,6 +176,8 @@
             background-color: #f9f9f9;
             border-radius: 4px;
             margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
         }
         
         .site-favicon {
@@ -296,6 +298,11 @@
 
             // 设置网站标题
             siteTitle.textContent = data.title;
+
+            // 如果有描述信息，添加为title属性实现悬浮提示
+            if (data.desc) {
+                siteInfo.title = data.desc;
+            }
 
             // 设置网站图标
             if (data.icon) {
