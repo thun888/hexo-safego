@@ -1,6 +1,6 @@
 {
     "name": "hexo-safego-thun888",
-    "version": "2.2.6",
+    "version": "2.3.0",
     "description": "✨Hexo plugin for safe external link redirection with base64 encoding, domain whitelisting, and support for a custom redirect page.",
     "main": "index.js",
     "dependencies": {
