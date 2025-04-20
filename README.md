@@ -6,6 +6,8 @@
    2. 主题色
 3. 自动获取页面信息（搭配[xaoxuu/site-info-api](https://github.com/xaoxuu/site-info-api/)）
 
+![image](https://github.com/user-attachments/assets/03b33d20-42e0-41d7-91c0-dd9f7518d5f9)
+
 **使用方法**：
 
 ```shell
@@ -58,7 +60,7 @@ hexo_safego:
 ```
 
 
-
+---
 
 简体中文 | [English](README_en.md)
 
