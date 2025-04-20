@@ -4,7 +4,8 @@ const config = hexo.config.hexo_safego = Object.assign({
     general: {
         enable: false,
         enable_base64_encode: true,
-        enable_target_blank: true
+        enable_target_blank: true,
+        auto_redirect: false     // 是否自动跳转到目标链接
     },
     security: {
         url_param_name: 'u',
@@ -19,12 +20,17 @@ const config = hexo.config.hexo_safego = Object.assign({
     whitelist: {
         domain_whitelist: []  // 域名白名单列表
     },
+    siteinfo: {
+        api: "",              // 网站信息API地址，如 https://siteinfo-api.hzchu.top/api/v1?url={href}
+        enable: false         // 是否启用网站信息API
+    },
     appearance: {
         avatar: "https://cdn.jsdelivr.net/npm/hexo-safego/lib/avatar.png",
         title: "请填写网站名称",
         subtitle: "请填写网站副标题",
         darkmode: false,       // 设置为true为暗色模式
-        countdowntime: -1      // 倒计时秒数
+        countdowntime: -1,     // 倒计时秒数
+        theme_color: "#056DE8" // 主题色，用于进度条和按钮
     },
     debug: {
         enable: false          // 调试参数，默认为false
