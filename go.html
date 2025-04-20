@@ -204,6 +204,18 @@
             font-size: 13px;
             color: #8590a6;
         }
+        
+        .site-desc {
+            font-size: 12px;
+            color: #333;
+            margin-top: 8px;
+            padding: 12px;
+            display: none;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        
         /* 深色模式 */
         
         @media (prefers-color-scheme: dark) {
@@ -295,6 +307,7 @@
             const siteFavicon = document.getElementById('site-favicon');
             const siteInfo = document.getElementById('site-info');
             const siteInfoLoading = document.getElementById('site-info-loading');
+            const siteDesc = document.getElementById('site-desc');
 
             // 设置网站标题
             siteTitle.textContent = data.title;
@@ -302,6 +315,17 @@
             // 如果有描述信息，添加为title属性实现悬浮提示
             if (data.desc) {
                 siteInfo.title = data.desc;
+                // 同时添加到描述区域
+                siteDesc.textContent = data.desc;
+                
+                // 添加点击事件，点击时切换显示/隐藏描述
+                siteInfo.addEventListener('click', function() {
+                    if (siteDesc.style.display === 'block') {
+                        siteDesc.style.display = 'none';
+                    } else {
+                        siteDesc.style.display = 'block';
+                    }
+                });
             }
 
             // 设置网站图标
@@ -459,6 +483,7 @@
                 <img id="site-favicon" class="site-favicon" src="" alt="网站图标">
                 <div id="site-title" class="site-title"></div>
             </div>
+            <div id="site-desc" class="site-desc"></div>
         </div>
         {% endif %}
         
