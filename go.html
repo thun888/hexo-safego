@@ -329,8 +329,8 @@
             }
 
             // 设置网站图标
-            if (data.icon) {
-                siteFavicon.src = data.icon;
+            if (data.iconBase64) {
+                siteFavicon.src = data.iconBase64;
             } else {
                 siteFavicon.src = getFaviconUrl(url);
                 siteFavicon.onerror = function() {
@@ -468,9 +468,9 @@
         </div>
         <div class="message">
             {% if auto_redirect %}
-            您即将离开「{{title}}」，系统将自动为您跳转，请注意您的账号和财产安全。
+            您即将离开「{{subtitle}}」，系统将自动为您跳转。<br>请注意您的账号和财产安全。
             {% else %}
-            您即将离开「{{title}}」，请点击下方按钮前往，注意您的账号和财产安全。
+            您即将离开「{{subtitle}}」，请点击下方按钮前往。<br>注意保护您的账号和财产安全。
             {% endif %}
         </div>
         
